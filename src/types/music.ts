@@ -1,11 +1,26 @@
+export interface Artist {
+  name: string;
+  id: string;
+}
+
 export interface Track {
   id: string;
   title: string;
   artist: string;
+  artists: Artist[];
   album: string;
+  albumId: string;
+  albumType: string;
   duration: number; // in seconds
+  durationMs: number;
+  popularity: number;
+  explicit: boolean;
+  releaseDate: string;
+  isrc: string;
+  copies: string[];
+  archived: boolean;
   albumArt?: string;
-  url: string;
+  url?: string;
 }
 
 export interface Playlist {
